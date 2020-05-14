@@ -7,14 +7,20 @@
  */
 void free_list(stack_t **head)
 {
-	stack_t *tmp = *head;
+	stack_t *hcopy;
+	stack_t *tmp;
 
-	if (!head)
-		return;
-	while (tmp->next)
+	if (*head)
 	{
-		tmp = tmp->next;
-		free(tmp->prev);
+		hcopy = *head;
+		*head = NULL;
+
+		while (hcopy->next)
+		{
+			tmp = hcopy;
+			hcopy = hcopy->next;
+			free(tmp);
+		}
+		free(hcopy);
 	}
-	free(tmp);
 }

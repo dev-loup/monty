@@ -1,5 +1,5 @@
 #include "monty.h"
-
+FILE *bytecode;
 /**
  * main - Monty command interpreter
  * Description: Monty executes file scripts with built-in code
@@ -7,9 +7,9 @@
  * @argv: argument values
  * Return: EXIT_SUCCESS or EXIT_FAILURE
  */
+
 int main(int argc, char **argv)
 {
-	FILE *bytecode;
 	char *line = NULL;
 	unsigned int ln_num = 1;
 	size_t len = 0;

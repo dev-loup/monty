@@ -20,4 +20,5 @@ void monty_core(char *line, stack_t **h, stack_t **t, int *md, unsigned int ln)
 	chk_code = tok_validator(line, &table);
 	if (chk_code == 1)
 		m_executer(&table);
+	
 }

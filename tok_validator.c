@@ -25,6 +25,7 @@ int tok_validator(char *line, cmd_t *table)
 			printf("L%d: usage: push integer\n", ln);
 			free(line);
 			free_list(table->head);
+			fclose(bytecode);
 			exit(EXIT_FAILURE);
 		}
 		for (len = (strlen(arg) - 1); len >= 0; len--)
@@ -36,6 +37,7 @@ int tok_validator(char *line, cmd_t *table)
 				printf("L%d: usage: push integer\n", ln);
 				free(line);
 				free_list(table->head);
+				fclose(bytecode);
 				exit(EXIT_FAILURE);
 			}
 		}

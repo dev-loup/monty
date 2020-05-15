@@ -40,5 +40,6 @@ void m_executer(cmd_t *table)
 
 	printf("L%d: unknown instruction %s\n", table->line_number, table->opcode);
 	free_list(table->head);
+	fclose(bytecode);
 	exit(EXIT_FAILURE);
 }

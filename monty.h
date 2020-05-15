@@ -9,7 +9,7 @@
 #include <limits.h>
 #include <string.h>
 #include "structs.h"
-
+extern FILE *bytecode;
 void monty_core(char *line, stack_t **h, stack_t **t, int *mode, unsigned int ln);
 int tok_validator(char *line, cmd_t *table);
 void m_executer(cmd_t *table);

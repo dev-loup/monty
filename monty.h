@@ -29,4 +29,6 @@ void pstr(cmd_t *table);
 void rotl(cmd_t *table);
 void rotr(cmd_t *table);
 void free_list(stack_t **head);
+void stack(cmd_t *table);
+void queue(cmd_t *table);
 #endif /*MONTY_H*/

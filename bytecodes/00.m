@@ -1,9 +1,15 @@
-push -1
-
-push 0r
-
+push 1
+push 2
+push 3
 pall
-
-push 4 push 3 push 2
-
+stack
+push 4
+push 5
+push 6
+pall
+add
+pall
+queue
+push 11111
+add
 pall

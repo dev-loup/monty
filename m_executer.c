@@ -24,6 +24,8 @@ void m_executer(cmd_t *table)
 		{"pstr", pstr},
 		{"rotl", rotl},
 		{"rotr", rotr},
+		{"stack", stack},
+		{"queue", queue},
 		{NULL, NULL}
 	};
 	int i = 0;

@@ -1,10 +1,9 @@
-push 1
-push 2
-push 3
+push -1
+
+push 0r
+
 pall
-pop
-pall
-pop
-pall
-pop
+
+push 4 push 3 push 2
+
 pall

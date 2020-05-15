@@ -23,6 +23,8 @@ int tok_validator(char *line, cmd_t *table)
 		if (arg == NULL)
 		{
 			printf("L%d: usage: push integer\n", ln);
+			free(line);
+			free_list(table->head);
 			exit(EXIT_FAILURE);
 		}
 		for (len = (strlen(arg) - 1); len >= 0; len--)
@@ -32,6 +34,8 @@ int tok_validator(char *line, cmd_t *table)
 			if (arg[len] > 57 || arg[len] < 48)
 			{
 				printf("L%d: usage: push integer\n", ln);
+				free(line);
+				free_list(table->head);
 				exit(EXIT_FAILURE);
 			}
 		}

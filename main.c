@@ -10,7 +10,7 @@
 int main(int argc, char **argv)
 {
 	FILE *bytecode;
-	char *line;
+	char *line = NULL;
 	unsigned int ln_num = 1;
 	size_t len = 0;
 	stack_t *h = NULL;

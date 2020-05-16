@@ -34,7 +34,7 @@ void pint(cmd_t *table)
 
 	if (h == NULL)
 	{
-		printf("L%d: can't pint, stack empty\n", table->line_number);
+		fprintf(stderr, "L%d: can't pint, stack empty\n", table->line_number);
 		exit(EXIT_FAILURE);
 	}
 
@@ -54,13 +54,13 @@ void pchar(cmd_t *table)
 
 	if (h == NULL)
 	{
-		printf("L%d: can't pchar, stack empty\n", table->line_number);
+		fprintf(stderr, "L%d: can't pchar, stack empty\n", table->line_number);
 		exit(EXIT_FAILURE);
 	}
 
 	if (h->n < 0 || h->n > 127)
 	{
-		printf("L%d: can't pchar, value out of range\n", table->
+		fprintf(stderr, "L%d: can't pchar, value out of range\n", table->
 		       line_number);
 		exit(EXIT_FAILURE);
 	}

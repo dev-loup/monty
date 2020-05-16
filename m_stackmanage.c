@@ -13,7 +13,7 @@ void push(cmd_t *table)
 
 	if (h == NULL)
 	{
-		printf("L%d: usage: push integer\n", table->line_number);
+		fprintf(stderr, "L%d: usage: push integer\n", table->line_number);
 		exit(EXIT_FAILURE);
 	}
 	new = malloc(sizeof(stack_t));
@@ -65,7 +65,7 @@ void pop(cmd_t *table)
 
 	if (*h == NULL || h == NULL)
 	{
-		printf("L%d: can't pop an empty stack\n", table->line_number);
+		fprintf(stderr, "L%d: can't pop an empty stack\n", table->line_number);
 		exit(EXIT_FAILURE);
 	}
 
@@ -90,7 +90,7 @@ void swap(cmd_t *table)
 
 	if (*h == NULL || h == NULL || (*h)->next == NULL)
 	{
-		printf("L%d: can't swap, stack too short\n", table->line_number);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", table->line_number);
 		exit(EXIT_FAILURE);
 	}
 	first = *h;

@@ -14,7 +14,7 @@ void monty_core(char *line, stack_t **h, stack_t **t, int *md, unsigned int ln)
 	int chk_code;
 
 	table.mode = md;
-	table.line_number = ln;
+	table.l_num = ln;
 	table.head = h;
 	table.tail = t;
 	chk_code = tok_validator(line, &table);

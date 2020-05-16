@@ -10,7 +10,7 @@ int tok_validator(char *line, cmd_t *table)
 {
 	char delims[] = " \t\r\n", *opcode, *arg;
 	int len;
-	unsigned int ln = table->line_number;
+	unsigned int ln = table->l_num;
 
 	if (line == NULL)
 		return (0);

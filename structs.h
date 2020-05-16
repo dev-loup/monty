@@ -21,7 +21,7 @@ typedef struct stack_s
  * @op: name of operation
  * @arg: argument for function
  * @mode: stack or queue mode
- * @line_number: number of line being evaluated
+ * @l_num: number of line being evaluated
  * @head: head of linked list
  * @tail: tail of linked list
  */
@@ -30,7 +30,7 @@ typedef struct cmd_s
 	char *opcode;
 	int arg;
 	int *mode;
-	unsigned int line_number;
+	unsigned int l_num;
 	stack_t **head;
 	stack_t **tail;
 } cmd_t;

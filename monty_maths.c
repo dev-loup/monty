@@ -16,7 +16,7 @@ void add(cmd_t *table)
 
 	if (table == NULL || h == NULL || *h == NULL || (*h)->next == NULL)
 	{
-		fprintf(stderr, "L%d: can't add, stack too short\n", table->line_number);
+		fprintf(stderr, "L%d: can't add, stack too short\n", table->l_num);
 		exit(EXIT_FAILURE);
 	}
 
@@ -45,7 +45,7 @@ void sub(cmd_t *table)
 
 	if (h == NULL || *h == NULL || (*h)->next == NULL)
 	{
-		fprintf(stderr, "L%d: can't sub, stack too short\n", table->line_number);
+		fprintf(stderr, "L%d: can't sub, stack too short\n", table->l_num);
 		exit(EXIT_FAILURE);
 	}
 
@@ -74,7 +74,7 @@ void divide(cmd_t *table)
 
 	if (h == NULL || *h == NULL || (*h)->next == NULL)
 	{
-		fprintf(stderr, "L%d: can't div, stack too short\n", table->line_number);
+		fprintf(stderr, "L%d: can't div, stack too short\n", table->l_num);
 		exit(EXIT_FAILURE);
 	}
 
@@ -83,7 +83,7 @@ void divide(cmd_t *table)
 
 	if (first->n == 0)
 	{
-		fprintf(stderr, "L%d: division by zero\n", table->line_number);
+		fprintf(stderr, "L%d: division by zero\n", table->l_num);
 		exit(EXIT_FAILURE);
 	}
 
@@ -108,7 +108,7 @@ void mul(cmd_t *table)
 
 	if (h == NULL || *h == NULL || (*h)->next == NULL)
 	{
-		fprintf(stderr, "L%d: can't mul, stack too short\n", table->line_number);
+		fprintf(stderr, "L%d: can't mul, stack too short\n", table->l_num);
 		exit(EXIT_FAILURE);
 	}
 
@@ -137,7 +137,7 @@ void mod(cmd_t *table)
 
 	if (h == NULL || *h == NULL || (*h)->next == NULL)
 	{
-		fprintf(stderr, "L%d: can't mod, stack too short\n", table->line_number);
+		fprintf(stderr, "L%d: can't mod, stack too short\n", table->l_num);
 		exit(EXIT_FAILURE);
 	}
 
@@ -146,7 +146,7 @@ void mod(cmd_t *table)
 
 	if (first->n == 0)
 	{
-		fprintf(stderr, "L%d: division by zero\n", table->line_number);
+		fprintf(stderr, "L%d: division by zero\n", table->l_num);
 		exit(EXIT_FAILURE);
 	}
 
